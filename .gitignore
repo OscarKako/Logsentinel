@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.eggs/
+.venv/
+venv/
+env/
+
+# Tests / outils
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Rapports générés localement (les exemples de /examples sont versionnés)
+rapport*.html
+rapport*.json
+!examples/rapport-exemple.*
+/samples/
+
+# Ne jamais publier de vrais journaux de production
+*.log
+!examples/*.log
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

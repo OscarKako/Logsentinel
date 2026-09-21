@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "logsentinel"
+version = "1.0.0"
+description = "Détection d'intrusions à partir des journaux SSH et web (brute force, SQLi, XSS, LFI, Log4Shell...)"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Votre Nom" }]
+keywords = ["cybersecurity", "ids", "hids", "log-analysis", "blue-team", "siem", "mitre-attack"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Security",
+    "Topic :: System :: Logging",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "ruff>=0.4"]
+
+[project.scripts]
+logsentinel = "logsentinel.cli:main"
+
+[tool.setuptools]
+packages = ["logsentinel"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py39"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
